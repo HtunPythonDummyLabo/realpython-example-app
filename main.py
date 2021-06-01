@@ -4,7 +4,9 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('login.html')
+    fruitList = ['apple','orange','banana']
+    dictList = {'Orion':200,'Krin':150,'Asahi':100}
+    return render_template('login.html',fruits = fruitList,dicts = dictList)
 
 @app.route('/welcome',methods=['POST','GET'])
 def welcome():

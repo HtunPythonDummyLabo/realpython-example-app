@@ -1,9 +1,31 @@
 <html>
+	<head>
+		<link rel="icon" type="image/jpg" href="{{url_for('static',filename='images/dummy_logo.jpg')}}"/>
+	</head>
 	<body>
 		<form action="/welcome" method="post">
 			<p>Enter Name</p>
 			<p><input type="text" name="name" /></p>
 			<p><input type="submit" value="submit"/></p>
 		</form>
+		<ul>
+			{% for item in fruits %}
+			<li>{{ item }}
+			    {% if item == 'apple' %}
+			        <span>&emsp;10割引</span>
+			    {% else  %}
+			        <span>&emsp;3割引</span>
+			    {% endif %}
+			</li>
+			{% endfor %}
+		</ul>
+
+		<ul>
+			{% for key,value in dicts.items() %}
+			<li>
+				{{ key }} &emsp; {{ value }}円
+			</li>
+			{% endfor %}
+		</ul>
 	</body>
 </html>

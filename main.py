@@ -1,6 +1,11 @@
+# import sys
+# sys.path.append('routes')
+
 from flask import Flask, redirect, url_for, request, render_template
 
 app = Flask(__name__)
+
+from routes import profile
 
 @app.route('/')
 def index():

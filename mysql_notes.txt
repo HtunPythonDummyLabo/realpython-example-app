@@ -1,0 +1,55 @@
+
+// Reference -> MySQL
+https://docs.rackspace.com/support/how-to/install-mysql-server-on-the-ubuntu-operating-system/
+
+
+// root deny solve
+https://phoenixnap.com/kb/access-denied-for-user-root-localhost
+
++--------------------+
+| Database           |
++--------------------+
+| demodb             |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.02 sec)
+
+mysql> use demodb
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> show tables;
++------------------+
+| Tables_in_demodb |
++------------------+
+| user             |
++------------------+
+1 row in set (0.00 sec)
+
+mysql> select * from user;
++---------+---------------+---------------+
+| user_id | user_name     | user_password |
++---------+---------------+---------------+
+| 000000  | Htun Myat Maw | rememberme    |
++---------+---------------+---------------+
+1 row in set (0.00 sec)
+
+mysql> show create table user;
++-------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Table | Create Table                                                                                                                                                                                                                            |
++-------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| user  | CREATE TABLE `user` (
+  `user_id` varchar(6) NOT NULL,
+  `user_name` varchar(40) DEFAULT NULL,
+  `user_password` varchar(25) DEFAULT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci |
++-------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> 
+

@@ -1,7 +1,0 @@
-
-// Reference -> MySQL
-https://docs.rackspace.com/support/how-to/install-mysql-server-on-the-ubuntu-operating-system/
-
-
-// root deny solve
-https://phoenixnap.com/kb/access-denied-for-user-root-localhost

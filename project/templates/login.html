@@ -1,10 +1,38 @@
-<html>
-	<body>
-		<h1>LogIn</h1>
-		<form action='/login' method='POST'>
-			<p>User Name <input type='text' name='username'/></p>
-			<p>Password&ensp; <input type='password' name='password'/></p>
-			<p><input type='submit' name='submit' value='Login'/></p>
-		</form>
-	</body>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Bootstrap Example</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="jumbotron text-center">
+	    <h2>ITカレッジ沖縄</h2>
+	    <p class="text-info">学校公人 フジ学園 <br/> 専門学校</p>
+	</div>
+        <div class="container">
+            <div class="col-sm-6 offset-sm-3">
+		<div class="card">
+		    <div class="card-body">
+		        <span class="text-danger">{{ message }}</span>
+		        <form action="/login" method="POST">
+                            <div class="form-group">
+                                <label for="userId">User Id</label>
+                                <input type="text" class="form-control" id="userId" name="userId" placeholder="Enter your ID">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+		    </div>
+		</div>
+            </div>
+        </div>
+    </body>
 </html>

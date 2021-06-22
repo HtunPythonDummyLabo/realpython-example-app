@@ -1,0 +1,32 @@
+<div class="modal fade" id="newAddressModal" tabindex="-1" role="dialog" aria-labelledby="newAddressModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="newAddressModalLabel">住所追加・最新化</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="post-office-no" class="col-form-label">郵便番号</label>
+            <input type="text" class="form-control" id="post-office-no" placeholder="000-0000">
+          </div>
+          <div class="form-group">
+            <label for="address-text" class="col-form-label">住所</label>
+            <textarea class="form-control" id="address-text" placeholder="例：那覇市、西一丁目……" rows="3"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="moving-date" class="col-form-label">引っ越し日</label>
+            <input type="text" class="form-control" id="moving-date" placeholder="2021-04-01">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
+        <button type="button" class="btn btn-primary">保存</button>
+      </div>
+    </div>
+  </div>
+</div>
